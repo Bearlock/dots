@@ -8,11 +8,11 @@ So far the organization of (most of) the config files is flat in the `kitty` dir
 
 The config files du jour are as follows:
 
-`font.conf` — Anything related to how a font renders lives here
-`keymaps.conf` — Unedited at the time of writing this, but ideally any custom key mappings live here
-`mouse.conf` — Any mouse-clicky mappings and mouse-specific behaviors/gestures live here
-`tabbar.conf` — Tab bar specific settings live here (however, some of it _also_ lives in the current them, I probably should reconcile that)
-`kitty.conf` — The kitty config file; it loads 'n' composes the rest of my configs
+- `font.conf` — Anything related to how a font renders lives here
+- `keymaps.conf` — Unedited at the time of writing this, but ideally any custom key mappings live here
+- `mouse.conf` — Any mouse-clicky mappings and mouse-specific behaviors/gestures live here
+- `tabbar.conf` — Tab bar specific settings live here (however, some of it _also_ lives in the current them, I probably should reconcile that)
+- `kitty.conf` — The kitty config file; it loads 'n' composes the rest of my configs
 
 ## Themes
 
