@@ -1,0 +1,16 @@
+{
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"]
+    },
+  },
+  "sumneko-lua.enableNvimLuaDev": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/catalog-info.json": [
+      "**/metadata.yaml",
+      "plop-template.yaml"
+    ]
+  }
+}
