@@ -70,4 +70,19 @@ Plug('nvim-neorg/neorg', {
 
 Plug('nvim-neorg/neorg-telescope')
 
+-- Some fun nonsense
+Plug('eandrju/cellular-automaton.nvim')
+
+-- displays a popup with possible keybindings of the command you started typing
+Plug('folke/which-key.nvim')
+
+-- Git decorations in Lua (Lua fugitive)
+Plug('lewis6991/gitsigns.nvim')
+
+-- Zen mode editing
+Plug('folke/zen-mode.nvim')
+
+-- Astro support
+Plug('wuelnerdotexe/vim-astro')
+
 vim.call('plug#end')

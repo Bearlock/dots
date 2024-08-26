@@ -5,12 +5,38 @@
       "args": ["start"],
       "filetypes": ["sh"]
     },
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "gleam": {
+      "command": "gleam",
+      "args": ["lsp"],
+      "filetypes": ["gleam"],
+    }
   },
+  "[gleam]": {
+    "coc.preferences.formatOnSave": true
+  },
+  "intelephense.environment.phpVersion": "8.1.0",
   "sumneko-lua.enableNvimLuaDev": true,
   "yaml.schemas": {
+    "kubernetes": "*.yaml",
+    "http://json.schemastore.org/github-workflow": ".github/workflows/*",
+    "http://json.schemastore.org/chart": "Chart.{yml,yaml}",
+    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": ["docker-compose.{yml,yaml}", "compose.{yml,yaml}"],
     "https://json.schemastore.org/catalog-info.json": [
       "**/metadata.yaml",
       "plop-template.yaml"
-    ]
-  }
+    ],
+    "https://taskfile.dev/schema.json": "Taskfile.yaml"
+  },
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ]
 }
