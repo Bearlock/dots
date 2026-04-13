@@ -1,88 +1,39 @@
-local Plug = vim.fn['plug#']
+return {
+  -- Some fuzzy file goodness
+  'junegunn/fzf',
+  'junegunn/fzf.vim',
 
-vim.call('plug#begin', '~/.config/nvim/plugged')
+  -- Easy surrounds/commenting
+  { "kylechui/nvim-surround", version = "^4.0.0", event = "VeryLazy" },
+  'tpope/vim-commentary',
 
--- Some fuzzy file goodness
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+  -- Git History
+  'rhysd/git-messenger.vim',
 
--- Easy surrounds/commenting
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+  -- NetRW tweakin'
+  'tpope/vim-vinegar',
 
--- The nifty status bar at the bottom
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+  -- Nice icons — lua fork of vim-devicons
+  { 'nvim-tree/nvim-web-devicons', lazy = true },
 
--- Git History
-Plug 'rhysd/git-messenger.vim'
+  -- ~Rainbow~ CSV
+  { 'mechatroner/rainbow_csv', ft = 'csv' },
 
--- Linting!
-Plug 'dense-analysis/ale'
+  -- A dependency for telescope.nvim, neorg, etc — a library of lua functions
+  'nvim-lua/plenary.nvim',
 
--- Manage CTags plz
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
+  -- Some nifty searchin'
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.2' },
 
--- NetRW tweakin'
-Plug 'tpope/vim-vinegar'
+  -- displays a popup with possible keybindings of the command you started typing
+  'folke/which-key.nvim',
 
--- Tasty language server support
-Plug ('neoclide/coc.nvim', { branch = 'release' })
+  -- Git decorations in Lua (Lua fugitive)
+  {'lewis6991/gitsigns.nvim', opts = {}},
 
--- Fancy start screen
-Plug 'mhinz/vim-startify'
+  -- Astro support
+  'wuelnerdotexe/vim-astro',
 
--- Gimme that coffee cat theme
-Plug ('catppuccin/nvim', { as = 'catppuccin' })
-
--- Toggle a terminal
-Plug ('akinsho/toggleterm.nvim', { tag =  '*' })
-
--- Nice icons — lua fork of vim-devicons
-Plug 'nvim-tree/nvim-web-devicons'
-
--- ~Rainbow~ CSV
-Plug 'mechatroner/rainbow_csv'
-
--- treesitter support in neovim
-Plug('nvim-treesitter/nvim-treesitter', {
-  ['do'] = function()
-    vim.cmd('TSUpdate')
-  end
-})
-
--- Docblock generation (janky)
-Plug 'danymat/neogen'
-
--- A dependency for telescope.nvim, neorg, etc — a library of lua functions
-Plug('nvim-lua/plenary.nvim')
-
--- Some nifty searchin'
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.2' })
-
--- Neovim ORG mode
-Plug('nvim-neorg/neorg', {
-  ['do'] = function()
-    vim.cmd('Neorg sync-parsers')
-  end
-})
-
-Plug('nvim-neorg/neorg-telescope')
-
--- Some fun nonsense
-Plug('eandrju/cellular-automaton.nvim')
-
--- displays a popup with possible keybindings of the command you started typing
-Plug('folke/which-key.nvim')
-
--- Git decorations in Lua (Lua fugitive)
-Plug('lewis6991/gitsigns.nvim')
-
--- Zen mode editing
-Plug('folke/zen-mode.nvim')
-
--- Astro support
-Plug('wuelnerdotexe/vim-astro')
-
-vim.call('plug#end')
+  -- A nifty color highlighter
+  {'norcalli/nvim-colorizer.lua', opts = {}}
+}

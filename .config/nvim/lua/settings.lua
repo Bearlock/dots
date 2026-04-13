@@ -1,5 +1,3 @@
-require('settings.coc-nvim')
-
 -- Show existing tab with 2 spaces width
 vim.opt.tabstop = 2
 

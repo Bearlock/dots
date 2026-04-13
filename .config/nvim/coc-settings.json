@@ -8,35 +8,55 @@
     "terraform": {
       "command": "terraform-ls",
       "args": ["serve"],
-      "filetypes": ["terraform", "tf"],
+      "filetypes": ["terraform", "tf", "hcl"],
       "initializationOptions": {},
       "settings": {}
     },
     "gleam": {
       "command": "gleam",
       "args": ["lsp"],
-      "filetypes": ["gleam"],
+      "filetypes": ["gleam"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", "go.work"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gofumpt": true
+      }
+    },
+    "elixir": {
+      "command": "~/language-servers/elixir-ls/language_server.sh",
+      "filetypes": ["elixir", "eelixir", "heex"],
+      "rootPatterns": ["mix.exs", ".git"],
+      "settings": {
+        "elixirLS": {
+          "dialyzerEnabled": true
+        }
+      }
     }
   },
   "[gleam]": {
     "coc.preferences.formatOnSave": true
   },
-  "intelephense.environment.phpVersion": "8.1.0",
   "sumneko-lua.enableNvimLuaDev": true,
   "yaml.schemas": {
-    "kubernetes": "*.yaml",
     "http://json.schemastore.org/github-workflow": ".github/workflows/*",
     "http://json.schemastore.org/chart": "Chart.{yml,yaml}",
-    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": ["docker-compose.{yml,yaml}", "compose.{yml,yaml}"],
+    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": ["docker-compose.{yml,yaml}", "compose.{yml,yaml}", "compose.internal-notification.yaml"],
     "https://json.schemastore.org/catalog-info.json": [
       "**/metadata.yaml",
       "plop-template.yaml"
     ],
-    "https://taskfile.dev/schema.json": "Taskfile.yaml"
+    "https://taskfile.dev/schema.json": "Taskfile[-|_]*.yaml",
+    "https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json": ".gitlab-ci.yml",
+    "~/app-config-schema.json": "app-config.yaml",
+    "kubernetes": ["*_deployment.yaml", "*_service.yaml"]
   },
   "workspace.ignoredFolders": [
     "$HOME",
     "$HOME/.cargo/**",
     "$HOME/.rustup/**"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }

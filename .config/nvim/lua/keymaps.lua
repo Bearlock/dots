@@ -1,7 +1,0 @@
-require('keymaps.coc-nvim')
-require('keymaps.telescope-nvim')
-require('keymaps.tagbar')
-require('keymaps.neogen')
-require('keymaps.toggleterm-nvim')
-require('keymaps.neorg')
-require('keymaps.zen-mode-nvim')
